@@ -1,0 +1,14 @@
+<template>
+  <div class.bind="classes">
+    <div if.bind="status.isSearching">
+      ...
+    </div>
+    <div if.bind="showTime" click.delegate="cellClicked()" class="time">
+      ${ hour }:00
+    </div>
+    <div if.bind="showSearchResults">
+      <div>${ status.searchResults.options }</div>
+      <div class="result-label">results</div>
+    </div>
+  </div>
+</template>
