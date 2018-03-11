@@ -5,7 +5,7 @@
     <table if.bind="isLoaded">
       <tr>
         <th repeat.for="day of days" class="day-header" click.delegate="dayHeaderClicked(day)">
-          ${ day }
+          ${ day & oneTime }
         </th>
       </tr>
       <tr repeat.for="hour of hours">

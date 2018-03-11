@@ -4,10 +4,10 @@
       ...
     </div>
     <div if.bind="showTime" click.delegate="cellClicked()" class="time">
-      ${ hour }:00
+      ${ hour & oneTime }:00
     </div>
     <div if.bind="showSearchResults">
-      <div>${ status.searchResults.options }</div>
+      <div>${ status.searchResults.options & oneTime }</div>
       <div class="result-label">results</div>
     </div>
   </div>
