@@ -34,6 +34,18 @@ export class CalendarCellCustomElement {
     return `${tmp}badresults`;
   }
 
+  public get showTime(): boolean {
+    return !this.status.isSearching && this.status.searchResults.options === undefined;
+  }
+
+  public get showSearchResults(): boolean {
+    return !this.status.isSearching && this.status.searchResults.options !== undefined;
+  }
+
+  public get isSearching(): boolean {
+    return this.status.isSearching;
+  }
+
   public cellClicked(): void {
     let alreadySearching = this.status.isSearching;
     this.status.searchResults.options = undefined;
@@ -48,18 +60,6 @@ export class CalendarCellCustomElement {
         this.status.searchResults.options = Math.floor(Math.random() * 5);
       }, randomMilliseconds());
     }
-  }
-
-  public get showTime(): boolean {
-    return !this.status.isSearching && this.status.searchResults.options === undefined;
-  }
-
-  public get showSearchResults(): boolean {
-    return !this.status.isSearching && this.status.searchResults.options !== undefined;
-  }
-
-  public get isSearching(): boolean {
-    return this.status.isSearching;
   }
 
 }
