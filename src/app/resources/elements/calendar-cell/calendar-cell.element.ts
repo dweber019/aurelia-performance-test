@@ -58,4 +58,8 @@ export class CalendarCellCustomElement {
     return !this.status.isSearching && this.status.searchResults.options !== undefined;
   }
 
+  public get isSearching(): boolean {
+    return this.status.isSearching;
+  }
+
 }
