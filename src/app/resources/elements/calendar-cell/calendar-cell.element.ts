@@ -8,8 +8,8 @@ function randomMilliseconds(): number {
 @autoinject
 export class CalendarCellCustomElement {
 
-  @bindable({ defaultBindingMode: bindingMode.oneWay }) public hour!: number;
-  @bindable({ defaultBindingMode: bindingMode.oneWay }) public day!: number;
+  @bindable({ defaultBindingMode: bindingMode.oneTime }) public hour!: number;
+  @bindable({ defaultBindingMode: bindingMode.oneTime }) public day!: number;
 
   public status: any;
 
